@@ -1,0 +1,179 @@
+\documentclass[
+  12pt,
+  a4paper,
+  oneside,
+  brazil,
+  chapter=TITLE
+]{abntex2}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{newtxtext, newtxmath}
+\usepackage[brazil]{babel}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage[num]{abntex2cite}
+\usepackage[top=3cm, bottom=2cm, left=3cm, right=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\renewcommand{\ABNTEXchapterfont}{\rmfamily}
+\renewcommand{\ABNTEXchapterfontsize}{\normalsize}
+\renewcommand{\ABNTEXsectionfont}{\rmfamily}
+\renewcommand{\ABNTEXsectionfontsize}{\normalsize}
+\renewcommand{\ABNTEXsubsectionfont}{\rmfamily}
+\renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
+\renewcommand{\ABNTEXsubsubsectionfont}{\rmfamily}
+\renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
+
+\fancypagestyle{abntpaginas}{%
+  \fancyhf{}
+  \fancyhead[R]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=black
+}
+
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+
+\titulo{Título do Trabalho}
+\autor{Nome do Autor}
+\instituicao{Nome da Instituição}
+\local{Cidade}
+\data{2025}
+\tipotrabalho{Trabalho Avaliativo}
+\preambulo{%
+  Trabalho avaliativo apresentado à disciplina de
+  Nome da Disciplina do curso de Nome do Curso.%
+}
+
+\renewcommand{\imprimircapa}{%
+  \begin{capa}
+    \centering
+    {\bfseries\large\MakeUppercase{\imprimirinstituicao}\par}
+    {\large Nome do Departamento\par}
+    \vspace*{\fill}
+    {\large\MakeUppercase{\imprimirautor}\par}
+    \vspace*{\fill}
+    {\bfseries\large\MakeUppercase{\imprimirtitulo}\par}
+    \vspace*{\fill}
+    {\large\MakeUppercase{\imprimirlocal}\par}
+    {\large\imprimirdata\par}
+  \end{capa}
+}
+
+\renewcommand{\imprimirfolhaderosto}{%
+  \begin{folhaderosto}
+    \centering
+    {\large\MakeUppercase{\imprimirautor}\par}
+    \vspace*{\fill}
+    {\bfseries\large\MakeUppercase{\imprimirtitulo}\par}
+    \vspace*{\fill}
+    {\noindent\hspace{.45\textwidth}%
+    \begin{minipage}{.55\textwidth}
+      \SingleSpacing\small\imprimirpreambulo
+    \end{minipage}\par}
+    \vspace*{\fill}
+    {\large\MakeUppercase{\imprimirlocal}\par}
+    {\large\imprimirdata\par}
+  \end{folhaderosto}
+}
+
+\begin{document}
+
+\selectlanguage{brazil}
+\OnehalfSpacing
+\frenchspacing
+
+\pretextual
+
+\imprimircapa
+\imprimirfolhaderosto
+
+\begin{resumo}
+\SingleSpacing
+Texto do resumo em parágrafo único. Apresentar objetivo,
+método, resultados e conclusões em voz ativa, terceira pessoa,
+sem citações. De 150 a 250 palavras.
+
+\vspace{\onelineskip}
+\noindent
+\textbf{Palavras-chave}: palavra-chave 1. Palavra-chave 2. Palavra-chave 3.
+\end{resumo}
+
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+\textual
+\pagestyle{abntpaginas}
+
+\chapter{Introdução}
+\label{cap:introducao} 
+\label{cap:introducao} 
+
+A introdução delimita o tema, apresenta a justificativa, os
+objetivos e a organização do texto \cite{ABNT14724:2011}.
+
+\section{Objetivo Geral}
+
+Descrever o propósito central do trabalho com um verbo no
+infinitivo (analisar, desenvolver, avaliar, propor etc.).
+
+\section{Objetivos Específicos}
+
+\begin{itemize}
+  \item Primeiro objetivo específico;
+  \item Segundo objetivo específico;
+  \item Terceiro objetivo específico.
+\end{itemize}
+
+\section{Justificativa}
+
+Apresentar as razões pelas quais o tema é relevante do ponto
+de vista científico, social e/ou econômico.
+
+\chapter{Desenvolvimento}
+\label{cap:desenvolvimento}
+
+Desenvolver o conteúdo do trabalho. Esta seção pode ser
+dividida em subseções conforme necessário.
+
+Citação indireta: segundo \cite{GIL2010}, descrever
+a ideia do autor com suas próprias palavras.
+
+A \textbf{citação direta curta} (até 3 linhas) fica entre
+aspas no corpo do texto: ``Exemplo de citação
+direta.'' \cite[p.~10]{MARCONI2017}.
+
+A \textbf{citação direta longa} (mais de 3 linhas) recebe
+recuo de 4~cm, fonte tamanho~10 e espaço simples, sem aspas:
+
+\begin{citacao}
+  Exemplo de citação direta longa. Trecho recuado conforme
+  ABNT NBR 10520:2023, com fonte menor e espaçamento simples,
+  sem uso de aspas \cite[p.~21]{MINAYO2014}.
+\end{citacao}
+
+\chapter{Conclusão}
+\label{cap:conclusao}
+
+Retomar os objetivos propostos e verificar em que medida foram
+atingidos. Não introduzir informações novas, apenas sintetizar
+as principais descobertas do trabalho.
+
+\postextual
+
+\bibliography{referencias}
+
+\end{document}
