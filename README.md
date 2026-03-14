@@ -46,14 +46,10 @@ Template LaTeX para trabalhos acadêmicos conforme ABNT NBR 14724:2011, constru�
 
 ## Referências bibliográficas
 
-O arquivo `referencias.bib` deve ser salvo em **UTF-8 sem BOM**. Caracteres acentuados devem ser escritos diretamente em UTF-8 — nunca como sequências de escape latin-1.
+O arquivo `referencias.bib` deve ser salvo em **UTF-8**. Escreva caracteres acentuados diretamente — não use sequências de escape.
 
 ```bibtex
-% Correto
 title = {Informação e documentação},
-
-% Incorreto
-title = {Informa{\c{c}}{\~a}o e documenta{\c{c}}{\~a}o},
 ```
 
 ## Normas atendidas
